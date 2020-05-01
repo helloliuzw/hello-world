@@ -1,0 +1,19 @@
+此安装方法已在Ubuntu 18.04上验证成功
+
+1.更新镜像源
+	sudo apt-get update
+2.下载数据库
+	sudo apt-get install mysql-server-5.7
+	sudo apt-get install mysql-client-5.7
+	sudo apt-get install libmysqlclient-dev
+3.shell交互界面下启动mysql服务
+	sudo service mysql start
+	mysql -u root
+	sudo service mysql stop
+4.Python调用MySQL数据库内容
+	import pymysql
+	……
+5.创建数据库,设置支持中文
+	create database CAREER;
+	alter database CAREER character set 'gbk';
+	show create database CAREER;
